@@ -24,9 +24,9 @@ const Create = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-700 pt-20">
+    <div className="min-h-screen pt-20">
       <div className="flex">
-        <div className="w-[40%] absolute pl-40 -mt-15">
+        <div className="w-[40%] absolute pl-10 -mt-15">
 
           <h2 className="text-2xl font-semibold text-gray-100 mb-10">
             Create Recipe
