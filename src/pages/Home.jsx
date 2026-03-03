@@ -47,7 +47,7 @@ const Home = () => {
         <div className="mt-20 text-gray-500 text-sm tracking-wide">
           Built with React • Tailwind • Context API
         </div>
-
+          
       </div>
 
     </div>

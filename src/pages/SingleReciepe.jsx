@@ -26,17 +26,22 @@ const SingleReciepe = () => {
     }
   });
 
-  const submitHandler = (updatedRecipe) => {
-    const updatedData = data.map((rec) =>
-      rec.id == params.id ? { ...rec, ...updatedRecipe } : rec
-    );
-    setData(updatedData);
-    toast.success("Recipe Updated ✅");
-    navigate("/recipies");
-  };
+ const submitHandler = (updatedRecipe) => {
+  const updatedData = data.map((rec) =>
+    rec.id === params.id ? { ...rec, ...updatedRecipe } : rec
+  );
+
+  
+  localStorage.setItem("recipes", JSON.stringify(updatedData));
+
+  setData(updatedData);
+  toast.success("Recipe Updated ✅");
+  navigate("/recipies");
+};
 
   const deleteHandler = () => {
     const filteredData = data.filter((rec) => rec.id != params.id);
+    localStorage.setItem("recipes", JSON.stringify(filteredData));
     setData(filteredData);
     toast.error("Recipe Deleted 🗑️");
     navigate("/recipies");

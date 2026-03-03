@@ -10,14 +10,16 @@ const Create = () => {
     handleSubmit,
     reset,
     formState: { errors }
-  } = useForm();
+        } = useForm();
 
-  const [data, setData] = useContext(recipecontext);
-  const navigate = useNavigate();
-  const submitHandler = (recipe) => {
+    const [data, setData] = useContext(recipecontext);
+    const navigate = useNavigate();
+    const submitHandler = (recipe) => {
 
     recipe.id = nanoid();
-    setData([...data, recipe]);
+    const updatedData = [...data, recipe];
+    setData(updatedData);
+    
     reset();
     toast.success("New Recipe Added ✅")
     navigate('/recipies')

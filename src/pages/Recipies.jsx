@@ -12,7 +12,7 @@ const Recipies = () => {
   );
 
   return (
-    <div className='flex flex-wrap'>
+    <div className='flex flex-wrap gap-1.5'>
       {data.length > 0 ? recipeRender : "No Recipe Found"}
     </div>
   )
